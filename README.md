@@ -1,3 +1,11 @@
+# ⚠️ **IMPORTANT** ⚠️  
+
+This code is the property of OX. I have only restored a previous commit that included support for QBCore.  
+
+Do not seek support for this repository in OX Discord or any other related servers.  
+Respect OX's decision not to provide support for QBCore.  
+
+
 # ox_target
 
 ![](https://img.shields.io/github/downloads/overextended/ox_target/total?logo=github)
