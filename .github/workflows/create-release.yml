@@ -1,9 +1,10 @@
 name: Create release
 
-on:
+on: 
   push:
-    tags:
-      - 'v*.*.*'
+    branches:
+      - main 
+  workflow_dispatch:
 
 jobs:
   create-release:
@@ -47,11 +48,11 @@ jobs:
           cd ./temp && zip -r ../ox_target.zip ./ox_target
 
       - name: Create Release
-        uses: 'marvinpinto/action-automatic-releases@v1.2.1'
-        id: auto_release
+        uses: 'marvinpinto/action-automatic-releases@latest'
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           title: '${{ env.RELEASE_VERSION }}'
+          automatic_release_tag: "latest"
           prerelease: false
           files: ox_target.zip
 
